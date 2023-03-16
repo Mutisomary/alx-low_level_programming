@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * main - print size of cumputer types
+ * main - size of different types on computers program
  * Return 0 (Success)
  */
 int main(void);
