@@ -4,21 +4,21 @@
 /**
 * _strdup - Function returns a pointer containing copy of a string.
 * @str: The pointer.
-* Return: a.
+* Return: pointer.
 */
 
 char *_strdup(char *str)
 {
-	char *a;
+	char *bbb;
 	int i, j = 0;
 
 	if (str == NULL)
 		return (NULL);
 	for (i = 0; str[i] != '\0'; i++)
-		a = malloc(sizeof(char) * (i + 1));
-	if (a == NULL)
+		bbb = malloc(sizeof(char) * (i + 1));
+	if (bbb == NULL)
 		return (NULL);
 	for (j = 0; str[j] != '\0'; j++)
-		a[j] = str[j];
-	return (a);
+		bbb[j] = str[j];
+	return (bbb);
 }
