@@ -1,4 +1,4 @@
-#include "main.h"
+4-isalpha.c#include "main.h"
 
 /**
 * _isalpha - Function that checks for alphabets.
