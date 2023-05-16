@@ -2,7 +2,7 @@
 
 /**
  * binary_to_uint - converts a binary number to unsigned int
- * @b: string containing the binary number
+ * @b: pointer to the string containing the binary number
  *
  * Return: the converted number
  */
