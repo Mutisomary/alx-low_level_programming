@@ -3,29 +3,28 @@
 /**
  * main - Entry point of the program
  *
- * Return: Always 0 (Success)
+ * Return: 0 on success
  */
 int main(void)
 {
-	int fibonacci[50];
-	int i;
+	int n = 50; /* Number of Fibonacci numbers to print */
+	long long int first = 1, second = 2, next;
 
-	/* Initialize the first two Fibonacci numbers */
-	fibonacci[0] = 1;
-	fibonacci[1] = 2;
+	printf("The first %d Fibonacci numbers are:\n", n);
 
-	/* Calculate the remaining Fibonacci numbers */
-	for (i = 2; i < 50; i++)
+	/* Print the first two Fibonacci numbers */
+	printf("%lld, %lld", first, second);
+
+	/* Generate and print the remaining Fibonacci numbers */
+	for (int i = 2; i < n; i++)
 	{
-		fibonacci[i] = fibonacci[i - 1] + fibonacci[i - 2];
+		next = first + second;
+		printf(", %lld", next);
+		first = second;
+		second = next;
 	}
 
-	/* Print the Fibonacci numbers */
-	for (i = 0; i < 49; i++)
-	{
-		printf("%d, ", fibonacci[i]);
-	}
-	printf("%d\n", fibonacci[49]);
+	printf("\n");
 
 	return (0);
 }
