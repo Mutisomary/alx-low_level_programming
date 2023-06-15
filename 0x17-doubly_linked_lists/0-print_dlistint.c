@@ -15,7 +15,7 @@ size_t print_dlistint(const dlistint_t *h)
 	if (current == NULL)
 	{
 		printf("The doubly linked list is empty.\n");
-		return count;
+		return (count);
 	}
 
 	while (current != NULL)
@@ -25,6 +25,6 @@ size_t print_dlistint(const dlistint_t *h)
 		count++;
 	}
 
-	return count;
+	return (count);
 }
 
