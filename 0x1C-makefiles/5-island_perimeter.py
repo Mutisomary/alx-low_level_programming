@@ -1,20 +1,22 @@
 #!/usr/bin/python3
+"""Find perimeter"""
 
 
 def island_perimeter(grid):
-    """"finds the perimeter of a grid"""
-    perimeter = 0
-    rows = len(grid)
-    cols = len(grid[0])
-    
-    for row in range(rows):
-        for col in range(cols):
-            if grid[row][col] == 1:
-                perimeter += 4  # Each land cell contributes 4 sides
+    """Find the perimeter of an island"""
+    length_row = len(grid)
+    length_column = len(grid[0])
+    perimeter = 0;
+    connections = 0;
+
+    for i in range(0, length_row):
+        for j in range(0, length_column):
+            if grid[i][j] == 1:
+                perimeter += 4
                 
-                if row > 0 and grid[row - 1][col] == 1:
-                    perimeter -= 2  # Subtract 2 if there's a land cell above
-                if col > 0 and grid[row][col - 1] == 1:
-                    perimeter -= 2  # Subtract 2 if there's a land cell on the left
-    
-    return perimeter
+                if i != 0 and grid[i - 1][j] == 1:
+                    connections += 1
+
+                if j != 0 and grid[i][j - 1] == 1:
+                    connections += 1
+    return perimeter - (connections * 2)
